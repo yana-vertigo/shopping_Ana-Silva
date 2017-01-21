@@ -1,0 +1,9 @@
+.section-header {
+  @extend %generic-box-style;
+
+  h1 {
+    color: $main-text-color;
+    @include font-bold(13px, 1.5);
+    margin: 0;
+  }
+}

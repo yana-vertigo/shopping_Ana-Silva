@@ -1,0 +1,61 @@
+.product {
+  @extend %generic-box-style;
+  box-shadow: 0 0 0 $border-color;
+  max-height: 520px;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  top: 0;
+  transition: all 150ms ease;
+  transform: translateY(0);
+  display: block;
+
+  @include media-breakpoint-up(md) {
+    &:hover,
+    &:focus {
+      box-shadow: 0 3px 0 $border-color;
+      top: -1px;
+      transform: translateY(-3px);
+    }
+  }
+
+  @include media-breakpoint-up(sm){
+    float: left;
+    width: calc(50% - 6px);
+  }
+
+  @include media-breakpoint-up(lg) {
+    float: left;
+    width: calc(33.333% - 6px);
+  }
+
+  img {
+    max-width: 100%;
+    width: auto;
+  }
+
+  &-info {
+    margin-top: 20px;
+
+    &__name {
+      color: $main-text-color;
+      @include font-bold-condensed(13px, 1.5);
+      letter-spacing: 2.2px;
+      margin-bottom: .5rem;
+    }
+
+    &__description,
+    &__price {
+      color: $main-text-color;
+      @include font-book(13px, 1.5);
+      margin-bottom: .5rem;
+    }
+
+    &__price {
+
+      strong {
+
+      }
+    }
+  }
+}

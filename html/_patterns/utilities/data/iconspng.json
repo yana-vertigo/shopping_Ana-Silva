@@ -1,0 +1,48 @@
+{
+    "ico-adicionar": {
+        "x": 0,
+        "y": 0,
+        "width": 33,
+        "height": 34,
+        "source_image": "/Users/anasilva/Sites/shopping_Ana-Silva/html/_images/icons/ico-adicionar.png",
+        "image": "../images/icons/icons.png",
+        "total_width": 45,
+        "total_height": 34,
+        "escaped_image": "../images/icons/icons.png",
+        "offset_x": 0,
+        "offset_y": 0,
+        "px": {
+            "x": "0px",
+            "y": "0px",
+            "offset_x": "0px",
+            "offset_y": "0px",
+            "height": "34px",
+            "width": "33px",
+            "total_height": "34px",
+            "total_width": "45px"
+        }
+    },
+    "ico-cancelar": {
+        "x": 33,
+        "y": 0,
+        "width": 12,
+        "height": 12,
+        "source_image": "/Users/anasilva/Sites/shopping_Ana-Silva/html/_images/icons/ico-cancelar.png",
+        "image": "../images/icons/icons.png",
+        "total_width": 45,
+        "total_height": 34,
+        "escaped_image": "../images/icons/icons.png",
+        "offset_x": -33,
+        "offset_y": 0,
+        "px": {
+            "x": "33px",
+            "y": "0px",
+            "offset_x": "-33px",
+            "offset_y": "0px",
+            "height": "12px",
+            "width": "12px",
+            "total_height": "34px",
+            "total_width": "45px"
+        }
+    }
+}

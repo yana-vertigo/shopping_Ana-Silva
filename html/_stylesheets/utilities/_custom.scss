@@ -1,0 +1,53 @@
+// Variables
+// Fonts:
+$font-book          : 'Polaris book';
+$font-bold          : 'Polaris bold';
+$font-bold-condensed: 'Polaris bold condensed';
+
+// Colors:
+$site-bg-color: #F6F6F6;
+$content-bg-color: #FFF;
+$main-text-color: #222;
+$secondary-text-color: #AAA;
+
+
+// Button:
+$button-bg-color: #FFF;
+$border-color: #DDD;
+
+//Mixins
+// Convert font-size from px to rem with px fallback
+// @param $size - the value in pixel you want to convert
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  //Default font size on html element is 100%, equivalent to 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+//Font mixin with rem
+@mixin font-book($size, $line-height, $weight: normal, $style:normal) {
+  font: #{$style} #{$weight} #{$size}/#{$line-height} $font-book, sans-serif;
+  font-size: calculateRem($size);
+}
+@mixin font-bold($size, $line-height, $weight: normal, $style:normal) {
+  font: #{$style} #{$weight} #{$size}/#{$line-height} $font-bold, sans-serif;
+  font-size: calculateRem($size);
+}
+@mixin font-bold-condensed($size, $line-height, $weight: normal, $style:normal) {
+  font: #{$style} #{$weight} #{$size}/#{$line-height} $font-bold-condensed, sans-serif;
+  font-size: calculateRem($size);
+}
+
+// Generic box style
+%generic-box-style {
+  background-color: $content-bg-color;
+  display: block;
+  margin: 3px;
+  padding: ($grid-gutter-width/2) $grid-gutter-width;
+  width: 100%;
+}

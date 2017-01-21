@@ -1,0 +1,36 @@
+%button {
+  border: 0;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+.button {
+
+  &-bag {
+    @extend %button;
+    background-color: $button-bg-color;
+    border: 1px solid $border-color;
+    border-radius: 40px;
+    box-shadow: 0 1px 0 $border-color;
+    color: $main-text-color;
+    @include font-bold(13px, 1.5);
+    letter-spacing: 0.1px;
+    padding: ($grid-gutter-width/2) $grid-gutter-width;
+    position: relative;
+    transition: all 150ms ease;
+    top: 0;
+
+    &:hover {
+      box-shadow: 0 3px 0 $border-color;
+      top: -1px;
+    }
+  }
+
+}

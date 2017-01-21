@@ -1,0 +1,16 @@
+{{> organisms/header }}
+
+<div class="container-fluid">
+    <div class="row">
+        <main role="main" class="site-main">
+            {{> organisms/products content="bag" title="Your bag" }}
+            {{> organisms/products content="list" title="Product list" }}
+        </main>
+
+        <aside class="site-aside" role="complementary">
+            {{> organisms/shopping-bag }}
+        </aside>
+    </div>
+</div>
+
+{{> organisms/footer }}

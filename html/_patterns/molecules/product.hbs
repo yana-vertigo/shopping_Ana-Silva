@@ -1,0 +1,19 @@
+<article class="product" role="article">
+    <img src="/images/{{image}}" alt="{{name}}">
+
+    <div class="product-info">
+        <p class="product-info__name">{{name}}</p>
+        <p class="product-info__description">{{description}}</p>
+        <p class="product-info__price">
+            {{#if this.price-old }}
+                <span>{{price-old}}</span>
+            {{/if}}
+            <strong>{{price}}</strong>
+            {{#if this.discount }}
+                <span>| {{discount}}</span>
+            {{/if}}
+        </p>
+    </div>
+
+    {{>atoms/button-bag }}
+</article>

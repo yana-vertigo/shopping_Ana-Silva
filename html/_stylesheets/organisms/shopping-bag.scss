@@ -1,0 +1,37 @@
+.shopping-bag {
+  @extend %generic-box-style;
+
+  @include media-breakpoint-up(lg) {
+
+  }
+
+  h2 {
+    color: $main-text-color;
+    @include font-bold-condensed(24px, 1.5);
+    letter-spacing: 2.1px;
+    display: inline-block;
+  }
+
+  small {
+    color: $secondary-text-color;
+    display: block;
+    @include font-book(13px, 1.5);
+    text-align: right;
+  }
+
+  &__quantity {
+    color: $secondary-text-color;
+    @include font-book(13px, 1.5);
+    letter-spacing: 0.8px;
+  }
+
+  &__totalprice {
+    color: $main-text-color;
+    @include font-bold-condensed(16px, 1.5);
+
+    strong {
+      display: block;
+      float: right;
+    }
+  }
+}

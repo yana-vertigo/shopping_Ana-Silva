@@ -1,0 +1,11 @@
+.site-footer {
+  clear: both;
+  padding: ($grid-gutter-width/2) $grid-gutter-width;
+
+  p {
+    color: $main-text-color;
+    @include font-bold(10px, 1.5);
+    margin: auto;
+    text-align: center;
+  }
+}

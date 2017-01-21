@@ -1,0 +1,17 @@
+<section id="{{#compare this.content "bag"}}bag{{/compare}}{{#compare this.content "list"}}list{{/compare}}" class="products" {{#compare this.content "bag"}}data-empty="Ohhh! Your basket is feeling sad and lonely..."{{/compare}}>
+    {{> molecules/section-header }}
+
+    {{#compare this.content "bag" }}
+        {{> molecules/product name="TANYA TAY LOR" description="'Baby Doll' striped peplum top" image="11735583_8161812_255.jpg" price-old="£1585" price="£500" discount="50% off" bag="true" button-text="Remove from bag" }}
+
+        {{> molecules/product name="FORTE COUTURE" description="varsity bomber jacket" image="11745743_8214817_255.jpg" price="£480.90" bag="true" button-text="Remove from bag" }}
+    {{/compare}}
+
+    {{#compare this.content "list" }}
+        {{> molecules/product name="TANYA TAY LOR" description="'Baby Doll' striped peplum top" image="11734827_8179707_255.jpg" price-old="£1585" price="£1585" discount="50% off" button-text="Add to bag" }}
+
+        {{> molecules/product name="COACH 1941" description="origami pleat houndstooth trousers houndstooth" image="11730556_8194858_255.jpg" price="£500.89" button-text="Add to bag" }}
+
+        {{> molecules/product name="TANYA TAY LOR" description="'Baby Doll' striped peplum top" image="11736243_8231608_255.jpg" price="£500" button-text="Add to bag" }}
+    {{/compare}}
+</section>

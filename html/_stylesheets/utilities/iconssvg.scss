@@ -1,0 +1,18 @@
+%svg-common {
+	background: url("../images/icons/icons.svg") no-repeat;
+}
+
+.svg-ico-adicionar {
+	@extend %svg-common;
+	background-position: 0 0;
+	width: 33px;
+	height: 34px;
+}
+
+.svg-ico-cancelar {
+	@extend %svg-common;
+	background-position: 100% 0;
+	width: 12px;
+	height: 12px;
+}
+

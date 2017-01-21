@@ -1,0 +1,9 @@
+.site-header {
+  padding: ($grid-gutter-width/2) $grid-gutter-width;
+
+  h1 {
+    color: $main-text-color;
+    @include font-bold(12px, 1.5);
+    margin: 0;
+  }
+}
