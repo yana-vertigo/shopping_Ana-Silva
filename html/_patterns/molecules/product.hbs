@@ -8,7 +8,7 @@
             {{#if this.price-old }}
                 <span>{{price-old}}</span>
             {{/if}}
-            <strong>{{price}}</strong>
+            <strong{{#if this.price-old }} class="product-info__price--sale"{{/if}}>{{price}}</strong>
             {{#if this.discount }}
                 <span>| {{discount}}</span>
             {{/if}}

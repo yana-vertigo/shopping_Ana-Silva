@@ -10,7 +10,6 @@ class Starter
 
   init: () ->
     Starter.updateBag()
-    @setupLayout()
     @setupEvents()
     return
 
@@ -22,6 +21,12 @@ class Starter
     totalItems = $bagContainer.children('.product').length
     $shoppingBag.attr('data-quantity', totalItems)
     $shoppingBag.find('.shopping-bag__quantity strong').text(totalItems)
+
+#    Hide/show empty message
+    if totalItems == 0
+      $bagContainer.append('<p class="message">' + $bagContainer.data('empty') + '</p>')
+    else
+      $bagContainer.children('p').remove()
 
 #    Get total price
     finalPrice = 0
@@ -38,11 +43,6 @@ class Starter
 
     return
 
-  setupLayout: () ->
-    console.log 'setupLayout'
-
-    return
-
   setupEvents: () ->
 #    Add / Remove item
     $('.button-bag').on 'click', @addToBasket
@@ -54,10 +54,12 @@ class Starter
     $bagContainer = $('#bag')
     $listContainer = $('#list')
 
-    if $('#bag .product').length-1 == 0
-      $bagContainer.append('<p class="message">' + $bagContainer.data('empty') + '</p>')
-    else
-      $bagContainer.children('p').remove()
+#    if $('#bag .product').length-1 == 0
+#      console.log 'entra mensagem'
+#      $bagContainer.append('<p class="message">' + $bagContainer.data('empty') + '</p>')
+#    else
+#      console.log 'sai mensagem'
+#      $bagContainer.children('p').remove()
 
     if !$(this).hasClass('add-basket')
       $(this).addClass('add-basket').text($this.data('remove'))

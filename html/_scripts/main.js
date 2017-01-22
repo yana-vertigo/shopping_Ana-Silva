@@ -24,7 +24,6 @@ Starter = (function() {
 
   Starter.prototype.init = function() {
     Starter.updateBag();
-    this.setupLayout();
     this.setupEvents();
   };
 
@@ -35,6 +34,11 @@ Starter = (function() {
     totalItems = $bagContainer.children('.product').length;
     $shoppingBag.attr('data-quantity', totalItems);
     $shoppingBag.find('.shopping-bag__quantity strong').text(totalItems);
+    if (totalItems === 0) {
+      $bagContainer.append('<p class="message">' + $bagContainer.data('empty') + '</p>');
+    } else {
+      $bagContainer.children('p').remove();
+    }
     finalPrice = 0;
     $bagContainer.find('.product-info__price strong').each(function() {
       var getItemPrice, itemPrice;
@@ -47,10 +51,6 @@ Starter = (function() {
     $shoppingBag.find('.shopping-bag__totalprice strong').text('£ ' + finalPrice);
   };
 
-  Starter.prototype.setupLayout = function() {
-    console.log('setupLayout');
-  };
-
   Starter.prototype.setupEvents = function() {
     $('.button-bag').on('click', this.addToBasket);
   };
@@ -61,11 +61,6 @@ Starter = (function() {
     $thisProduct = $this.parent();
     $bagContainer = $('#bag');
     $listContainer = $('#list');
-    if ($('#bag .product').length - 1 === 0) {
-      $bagContainer.append('<p class="message">' + $bagContainer.data('empty') + '</p>');
-    } else {
-      $bagContainer.children('p').remove();
-    }
     if (!$(this).hasClass('add-basket')) {
       $(this).addClass('add-basket').text($this.data('remove'));
       $thisProduct.appendTo($bagContainer);
